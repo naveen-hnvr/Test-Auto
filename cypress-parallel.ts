@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import * as fs from 'fs';
+import * as path from 'path';
 
 const NODE_INDEX = Number(process.argv[2] || 1);
 const NODE_TOTAL = Number(process.argv[3] || 1);
