@@ -11,10 +11,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Packages
-        run:  npm install  
-      - name: Run Tests
-        run:  npx cypress run 
+      - name: Run Cypress Test
+        uses: cypress-io/github-action@v5
+        with:
+          command: npx cypress run
+          browser: chrome
  
 
        
