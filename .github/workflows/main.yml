@@ -14,7 +14,7 @@ jobs:
       - name: Install Packages
         run:  npm install  
       - name: Run Tests
-        run:  npx cypress run --env allure=true --spec $(node cypress-parallel.js ${{ matrix.containers }} 5) --browser chrome --headed
+        run:  npx cypress run --env allure=true --spec $(node cypress-parallel.ts ${{ matrix.containers }} 5) --browser chrome --headed
       
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.1
