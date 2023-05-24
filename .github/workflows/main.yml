@@ -12,10 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run Cypress Test
-        uses: cypress-io/github-action@v5
-        with:
-          command: npx cypress run --spec $(node cypress-parallel.ts ${{ matrix.containers }} 5) --headed
-          browser: chrome
+        run:  npx cypress run --env allure=true --spec $(node cypress-parallel.js ${{ matrix.containers }} 5) --browser chrome --headed
  
 
        
